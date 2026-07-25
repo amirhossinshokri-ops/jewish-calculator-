@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/app.css">
+</head>
+<body>
+
+
+<div class="container">
+
+<div class="login-modal">
+
+    <div class="login-box" dir="rtl">
+
+        <button id="closeModal" class="modal-close" aria-label="بستن">✕</button>
+
+        <div class="login-col">
+
+            <span class="eyebrow">دو تا محاسبه زدی رفیق</span>
+            <h2>وارد شو، ادامه بده</h2>
+            <p class="sub">حسابت رو بساز تا سابقه‌ی محاسبات و حالت علمی برات ذخیره بمونه.</p>
+
+            <div class="field">
+                <label for="uname">نام کاربری</label>
+                <input id="uname" placeholder="مثلاً amir_dev">
+            </div>
+
+            <div class="field">
+                <label for="upass">رمز عبور</label>
+                <input id="upass" placeholder="حداقل ۸ کاراکتر" type="password">
+            </div>
+
+            <button class="login-submit" id="loginSubmit">ورود به حساب</button>
+
+            <span class="fine-print">با ورود، پلن انتخابیت فعال میشه</span>
+
+        </div>
+
+        <div class="plans-col">
+
+            <span class="plans-title">یه پلن انتخاب کن</span>
+
+            <div class="plans">
+
+                <button class="plan-card" data-plan="basic" type="button">
+                    <span class="plan-name">پایه</span>
+                    <span class="plan-price"><span class="plan-currency">تومان</span>49<span class="plan-decimal">.000</span></span>
+                    <span class="plan-period">ماهانه</span>
+                    <ul class="plan-features">
+                        <li>عملیات چهار ضلعی نامحدود</li>
+                        <li>بدون تبلیغ</li>
+                    </ul>
+                </button>
+
+                <button class="plan-card is-popular" data-plan="pro" type="button">
+                    <span class="plan-badge">محبوب‌ترین</span>
+                    <span class="plan-name">حرفه‌ای</span>
+                    <span class="plan-price"><span class="plan-currency">تومان</span>99<span class="plan-decimal">.000</span></span>
+                    <span class="plan-period">ماهانه</span>
+                    <ul class="plan-features">
+                        <li>حالت علمی و پرانتز تودرتو</li>
+                        <li>سابقه محاسبات ابری</li>
+                        <li>پشتیبانی اولویت‌دار</li>
+                    </ul>
+                </button>
+
+                <button class="plan-card" data-plan="team" type="button">
+                    <span class="plan-name">تیمی</span>
+                    <span class="plan-price"><span class="plan-currency">تومان</span>249<span class="plan-decimal">.000</span></span>
+                    <span class="plan-period">ماهانه</span>
+                    <ul class="plan-features">
+                        <li>تا ۱۰ عضو</li>
+                        <li>اشتراک‌گذاری محاسبات</li>
+                    </ul>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<audio id="music" src="./jew.mp3"></audio>
+
+
+
+<div class="calculator">
+
+    <div class="display">
+
+        <div class="operation">
+        </div>
+
+        <div class="result">
+            
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button>e</button>
+        <button>μ</button>
+        <button data-action="act" class="p" data-value="(">(</button>
+        <button data-action="act" class="p" data-value=")">)</button>
+
+        <button data-action="clean" >AC</button> 
+        <button data-action="backspace" >⌫</button>
+
+        <button data-action="act" class="operator" data-value="/">/</button>
+        <button data-action="act" class="operator" data-value="*">*</button>
+
+        <button data-action="num" data-value="7">7</button>
+        <button data-action="num" data-value="8">8</button>
+        <button data-action="num" data-value="9">9</button>
+        <button data-action="act" class="operator" data-value="-">-</button>
+
+        <button data-action="num" data-value="4">4</button>
+        <button data-action="num" data-value="5">5</button>
+        <button data-action="num" data-value="6">6</button>
+        <button data-action="act" class="operator" data-value="+" id="plus">+</button>
+
+        <button data-action="num" data-value="1">1</button>
+        <button data-action="num" data-value="2">2</button>
+        <button data-action="num" data-value="3">3</button>
+
+        <button class="equal" data-action="equal" data-value="=">=</button>
+
+        <button data-action="num" data-value="0" class="zero">0</button>
+        <button>.</button>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <script src="./script/app.js"></script>
+</body>
+</html>
